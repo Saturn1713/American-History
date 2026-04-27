@@ -39,6 +39,15 @@ export const Route = createRootRoute({
         content:
           "Step inside an interactive digital museum exploring American history — from Colonial times to the modern day. Click artifacts, watch videos, take quizzes.",
       },
+      { property: "og:title", content: "The American Story — A Digital Museum" },
+      { name: "twitter:title", content: "The American Story — A Digital Museum" },
+      { name: "description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },
+      { property: "og:description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },
+      { name: "twitter:description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/331fd5e1-5dbb-4901-b3c0-c6c32241d20d/id-preview-84ef6280--d61194a7-8b14-414c-8671-043f991db326.lovable.app-1777271441124.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/331fd5e1-5dbb-4901-b3c0-c6c32241d20d/id-preview-84ef6280--d61194a7-8b14-414c-8671-043f991db326.lovable.app-1777271441124.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
