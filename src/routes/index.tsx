@@ -42,11 +42,8 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-40">
           <div className="max-w-3xl fade-in-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-navy-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-gold backdrop-blur-sm">
-              <Sparkles size={12} /> Now Open • Free Admission
-            </div>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-parchment md:text-7xl text-balance">
-              The American Story
+            <h1 className="font-display text-5xl font-bold leading-[1.05] text-parchment md:text-7xl text-balance">
+              Where America's Past Comes Alive
             </h1>
             <p className="mt-2 font-display text-2xl italic text-gold md:text-3xl">
               A Digital Museum
