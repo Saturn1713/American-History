@@ -4,7 +4,7 @@ import { exhibits } from "@/data/exhibits";
 export const Route = createFileRoute("/timeline")({
   head: () => ({
     meta: [
-      { title: "Timeline of American History — The American Story" },
+      { title: "Timeline of American History — American History" },
       {
         name: "description",
         content:

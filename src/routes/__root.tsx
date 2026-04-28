@@ -33,14 +33,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The American Story — A Digital Museum" },
+      { title: "American History — A Digital Museum" },
       {
         name: "description",
         content:
           "Step inside an interactive digital museum exploring American history — from Colonial times to the modern day. Click artifacts, watch videos, take quizzes.",
       },
-      { property: "og:title", content: "The American Story — A Digital Museum" },
-      { name: "twitter:title", content: "The American Story — A Digital Museum" },
+      { property: "og:title", content: "American History — A Digital Museum" },
+      { name: "twitter:title", content: "American History — A Digital Museum" },
       { name: "description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },
       { property: "og:description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },
       { name: "twitter:description", content: "An interactive digital museum exploring American history with curated exhibits and engaging content." },

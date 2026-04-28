@@ -7,13 +7,13 @@ import { ArrowRight, Compass, Sparkles, GraduationCap } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The American Story — A Digital Museum of US History" },
+      { title: "American History — A Digital Museum of US History" },
       {
         name: "description",
         content:
           "An interactive digital museum of American history. Explore six immersive exhibits, click artifacts, watch videos, and test your knowledge.",
       },
-      { property: "og:title", content: "The American Story — A Digital Museum" },
+      { property: "og:title", content: "American History — A Digital Museum" },
       {
         property: "og:description",
         content:
