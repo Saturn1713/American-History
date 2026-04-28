@@ -13,7 +13,7 @@ export function SiteFooter() {
           <div>
             <div className="text-xs uppercase tracking-[0.2em] text-gold">Visit</div>
             <ul className="mt-3 space-y-1 text-sm text-parchment/70">
-              <li>Open 24/7 • No tickets needed</li>
+              
               <li>Designed for ages 11+</li>
               <li>Works on phone, tablet & computer</li>
             </ul>
