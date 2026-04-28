@@ -4,13 +4,13 @@ import { BookOpen, Eye, Hand, Accessibility, Cpu, Layout, Lightbulb, Wrench } fr
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — The American Story" },
+      { title: "About — American History" },
       {
         name: "description",
         content:
           "About this digital museum: who it's for, how it works, and the design choices behind every gallery.",
       },
-      { property: "og:title", content: "About The American Story Museum" },
+      { property: "og:title", content: "About American History Museum" },
       {
         property: "og:description",
         content:

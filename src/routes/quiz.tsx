@@ -5,13 +5,13 @@ import { CheckCircle2, XCircle, Trophy, RotateCcw } from "lucide-react";
 export const Route = createFileRoute("/quiz")({
   head: () => ({
     meta: [
-      { title: "Quiz Hall — The American Story" },
+      { title: "Quiz Hall — American History" },
       {
         name: "description",
         content:
           "Test your knowledge of American history with an interactive 8-question quiz spanning the colonies to the modern day.",
       },
-      { property: "og:title", content: "Quiz Hall — The American Story" },
+      { property: "og:title", content: "Quiz Hall — American History" },
       {
         property: "og:description",
         content: "Eight questions, four centuries, one badge. Can you become a Curator?",

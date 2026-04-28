@@ -5,13 +5,13 @@ import { ExhibitCard } from "@/components/ExhibitCard";
 export const Route = createFileRoute("/exhibits/")({
   head: () => ({
     meta: [
-      { title: "All Exhibits — The American Story" },
+      { title: "All Exhibits — American History" },
       {
         name: "description",
         content:
           "Browse all six exhibits in the digital museum: Colonial America, the Revolution, the Civil War, Westward Expansion, Civil Rights, and Modern America.",
       },
-      { property: "og:title", content: "All Exhibits — The American Story" },
+      { property: "og:title", content: "All Exhibits — American History" },
       {
         property: "og:description",
         content: "Six immersive exhibits spanning 400 years of American history.",

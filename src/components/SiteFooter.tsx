@@ -4,7 +4,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <div className="font-display text-2xl font-bold text-gold">The American Story</div>
+            <div className="font-display text-2xl font-bold text-gold">American History</div>
             <p className="mt-3 text-sm text-parchment/70">
               An interactive digital museum exploring the people, ideas, and artifacts that shaped
               the United States — built for curious minds.
@@ -28,7 +28,7 @@ export function SiteFooter() {
         </div>
         <div className="gold-divider mt-10" />
         <p className="mt-6 text-center text-xs text-parchment/50">
-          © {new Date().getFullYear()} The American Story Museum • An educational project
+          © {new Date().getFullYear()} American History Museum • An educational project
         </p>
       </div>
     </footer>

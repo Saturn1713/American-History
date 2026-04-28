@@ -12,12 +12,12 @@ export const Route = createFileRoute("/exhibits/$slug")({
   },
   head: ({ loaderData }) => {
     const e = loaderData?.exhibit;
-    if (!e) return { meta: [{ title: "Exhibit — The American Story" }] };
+    if (!e) return { meta: [{ title: "Exhibit — American History" }] };
     return {
       meta: [
-        { title: `${e.title} (${e.era}) — The American Story` },
+        { title: `${e.title} (${e.era}) — American History` },
         { name: "description", content: e.intro },
-        { property: "og:title", content: `${e.title} — The American Story` },
+        { property: "og:title", content: `${e.title} — American History` },
         { property: "og:description", content: e.tagline },
         { property: "og:image", content: e.image },
         { name: "twitter:image", content: e.image },
