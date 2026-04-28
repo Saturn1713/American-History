@@ -77,6 +77,9 @@ function AboutPage() {
           A small digital museum dedicated to the story of America — designed to be beautiful,
           accessible, and genuinely fun to explore.
         </p>
+        <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic text-navy/80">
+          Created by <span className="font-semibold not-italic text-navy">Elias Walid Semaan</span> for a design project.
+        </p>
       </div>
 
       <div className="mt-14 grid gap-6 md:grid-cols-2">
