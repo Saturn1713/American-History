@@ -100,7 +100,17 @@ function shuffle<T>(arr: T[]): T[] {
 
 function QuizPage() {
   const [seed, setSeed] = useState(0);
-  const questions = useMemo(() => shuffle(QUESTIONS), [seed]);
+  const questions = useMemo(() => {
+    return shuffle(QUESTIONS).map((q) => {
+      const correctText = q.options[q.answer];
+      const shuffledOptions = shuffle(q.options);
+      return {
+        ...q,
+        options: shuffledOptions,
+        answer: shuffledOptions.indexOf(correctText),
+      };
+    });
+  }, [seed]);
   const [step, setStep] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
