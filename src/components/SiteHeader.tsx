@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import flagLogo from "@/assets/flag-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -17,12 +18,18 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-parchment/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
         <Link to="/" className="group flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold shadow-glow transition-transform group-hover:rotate-12">
-            <span className="font-display text-lg font-bold text-navy">A</span>
+          <div className="h-10 w-10 overflow-hidden rounded-full shadow-glow ring-2 ring-gold/60 transition-transform group-hover:rotate-12">
+            <img
+              src={flagLogo}
+              alt="American flag logo"
+              width={512}
+              height={512}
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-bold text-navy md:text-xl">
-              The American Story
+              American History
             </div>
             <div className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
               A Digital Museum
