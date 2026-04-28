@@ -43,7 +43,7 @@ function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-40">
           <div className="max-w-3xl fade-in-up">
             <h1 className="font-display text-5xl font-bold leading-[1.05] text-parchment md:text-7xl text-balance">
-              Where America's Past Comes Alive
+              American History
             </h1>
             <p className="mt-2 font-display text-2xl italic text-gold md:text-3xl">
               A Digital Museum
