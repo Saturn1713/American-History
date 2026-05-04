@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TimelineRouteImport } from './routes/timeline'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ExhibitsIndexRouteImport } from './routes/exhibits.index'
@@ -24,6 +25,11 @@ const TimelineRoute = TimelineRouteImport.update({
 const QuizRoute = QuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -50,6 +56,7 @@ const ExhibitsSlugRoute = ExhibitsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/quiz': typeof QuizRoute
   '/timeline': typeof TimelineRoute
   '/exhibits/$slug': typeof ExhibitsSlugRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/quiz': typeof QuizRoute
   '/timeline': typeof TimelineRoute
   '/exhibits/$slug': typeof ExhibitsSlugRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/quiz': typeof QuizRoute
   '/timeline': typeof TimelineRoute
   '/exhibits/$slug': typeof ExhibitsSlugRoute
@@ -77,16 +86,25 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/contact'
     | '/quiz'
     | '/timeline'
     | '/exhibits/$slug'
     | '/exhibits/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/quiz' | '/timeline' | '/exhibits/$slug' | '/exhibits'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/quiz'
+    | '/timeline'
+    | '/exhibits/$slug'
+    | '/exhibits'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/contact'
     | '/quiz'
     | '/timeline'
     | '/exhibits/$slug'
@@ -96,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
   QuizRoute: typeof QuizRoute
   TimelineRoute: typeof TimelineRoute
   ExhibitsSlugRoute: typeof ExhibitsSlugRoute
@@ -116,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/quiz'
       fullPath: '/quiz'
       preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -152,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
   QuizRoute: QuizRoute,
   TimelineRoute: TimelineRoute,
   ExhibitsSlugRoute: ExhibitsSlugRoute,
