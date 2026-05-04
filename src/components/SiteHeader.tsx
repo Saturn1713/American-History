@@ -9,6 +9,7 @@ const links = [
   { to: "/timeline", label: "Timeline" },
   { to: "/quiz", label: "Quiz" },
   { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
