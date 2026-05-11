@@ -105,7 +105,7 @@ function ExhibitPage() {
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {exhibit.artifacts.map((a) => (
+          {exhibit.artifacts.map((a: (typeof exhibit.artifacts)[number]) => (
             <ArtifactCard key={a.id} artifact={a} />
           ))}
         </div>
