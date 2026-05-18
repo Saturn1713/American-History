@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -39,7 +40,7 @@ function ContactPage() {
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = feedbackSchema.safeParse({ name, email, rating, message });
     if (!result.success) {
@@ -47,15 +48,22 @@ function ContactPage() {
       return;
     }
     setSubmitting(true);
-    // No backend wired yet — acknowledge locally.
-    setTimeout(() => {
-      toast.success("Thank you! Your feedback has been received.");
-      setName("");
-      setEmail("");
-      setRating(0);
-      setMessage("");
-      setSubmitting(false);
-    }, 400);
+    const { error } = await supabase.from("feedback").insert({
+      name: result.data.name,
+      email: result.data.email,
+      rating: result.data.rating,
+      message: result.data.message,
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not send feedback. Please try again.");
+      return;
+    }
+    toast.success("Thank you! Your feedback has been received.");
+    setName("");
+    setEmail("");
+    setRating(0);
+    setMessage("");
   };
 
   return (
